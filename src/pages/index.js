@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components"
 import Header from "../components/Header"
 import Head from "../components/Head"
 import GlobalStyle from "../styles/GlobalStyle"
+import HeroSection from "../components/HeroSection"
 
 const theme = {
 	transition: "all 0.2s linear",
@@ -19,6 +20,7 @@ const index = props => {
 			<div>
 				<Head title="Home" />
 				<Header />
+				<HeroSection />
 			</div>
 		</ThemeProvider>
 	)
