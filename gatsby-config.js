@@ -5,5 +5,9 @@
  */
 
 module.exports = {
-	plugins: [`gatsby-plugin-react-helmet`],
+	siteMetadata: {
+		title: "Personal Portfolio",
+		author: "Shaon Kabir",
+	},
+	plugins: [`gatsby-plugin-react-helmet`, `gatsby-plugin-styled-components`],
 }
