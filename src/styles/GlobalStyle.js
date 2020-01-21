@@ -9,10 +9,7 @@ const GlobalStyle = createGlobalStyle`
   	box-sizing: border-box;
   }
   body {
-    font-family: 'Merriweather',serif !important;
-    background: ${props => props.theme.bg};
-    color: red;
-    font-size: 50px;
+    font-family: 'Merriweather',serif;
   }
 `
 
