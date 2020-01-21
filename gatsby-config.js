@@ -9,5 +9,14 @@ module.exports = {
 		title: "Personal Portfolio",
 		author: "Shaon Kabir",
 	},
-	plugins: [`gatsby-plugin-react-helmet`, `gatsby-plugin-styled-components`],
+	plugins: [
+		`gatsby-plugin-react-helmet`,
+		`gatsby-plugin-styled-components`,
+
+		 resolve: `gatsby-source-filesystem`,
+	      options: {
+	        name: `images`,
+	        path: `${__dirname}/src/images/`,
+	      },
+		],
 }
