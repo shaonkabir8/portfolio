@@ -1,11 +1,12 @@
 import React from "react"
 import SectionTitle from "./SectionTitle"
 import AboutCard from "./AboutCard"
-import AboutStyle from "../styles/AboutStyle"
+import AboutPageStyle from "../styles/AboutStyle"
 
 const About = () => {
 	return (
 		<AboutStyle>
+			<Header />
 			<div clssName="about-section section-padding">
 				<div className="container">
 					<SectionTitle title="About me" />

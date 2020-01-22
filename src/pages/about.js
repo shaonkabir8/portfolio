@@ -2,11 +2,11 @@ import React from "react"
 import Header from "../components/Header"
 import SectionTitle from "../components/SectionTitle"
 import AboutCard from "../components/AboutCard"
-import AboutPageStyle from "../styles/AboutPageStyle"
+import AboutStyle from "../styles/AboutStyle"
 
 const About = () => {
 	return (
-		<AboutPageStyle>
+		<AboutStyle>
 			<Header />
 			<div clssName="about-section section-padding">
 				<div className="container">
@@ -43,7 +43,7 @@ const About = () => {
 					</div>
 				</div>
 			</div>
-		</AboutPageStyle>
+		</AboutStyle>
 	)
 }
 
