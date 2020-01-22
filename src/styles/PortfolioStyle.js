@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const PortfolioStyle = styled.div`
 	.section-bg {
-		background-image: url(../static/favicon.ico);
+		background-image: url(../../static/favicon.ico);
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;

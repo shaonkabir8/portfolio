@@ -1,6 +1,7 @@
 import React from "react"
 import PortfolioStyle from "../styles/PortfolioStyle"
 import ProjectItem from "./ProjectItem"
+import PortfolioSectionImg from "../images/stackoverflow.png"
 
 const PortfolioItem = () => {
   return (
@@ -17,6 +18,7 @@ const PortfolioItem = () => {
               <div className="col-md-6">
                 <div className="section-details">
                   <h3>Coolest Website</h3>
+                  <img src={PortfolioSectionImg} alt="PortfolioItem" />
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Natus dicta, provident animi laborum a sit nostrum quisquam
