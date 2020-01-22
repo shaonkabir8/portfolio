@@ -4,7 +4,7 @@ import PortfolioCardStyle from "../styles/PortfolioCardStyle"
 
 const portfolioCard = props => (
 	<PortfolioCardStyle>
-		<div className="col-md-4">
+		<div className={props.className}>
 			<div className="card">
 				<img className="card-img-top" src={props.imgSrc} alt="Card image cap" />
 				<div className="card-body">
