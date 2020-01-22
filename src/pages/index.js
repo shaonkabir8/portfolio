@@ -26,6 +26,7 @@ const index = props => {
 				<HeroSection />
 				<About />
 				<Skills />
+				<Portfolio />
 			</div>
 		</ThemeProvider>
 	)

@@ -6,7 +6,7 @@ const Portfolio = props => {
 	return (
 		<PortfolioStyle>
 			<div className="portfolio-section container" id="portfolio">
-				<SectionTitle title="Portfolio" />
+				<SectionTitle title="Projects" />
 				<PortfolioItem />
 			</div>
 		</PortfolioStyle>
