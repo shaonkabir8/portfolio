@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import SectionTitle from "./SectionTitle"
 import SkillBar from "./SkillBar"
+import Certifications from "./Certifications"
 const SkillStyle = styled.div``
 
 const Skills = () => {
@@ -18,7 +19,7 @@ const Skills = () => {
 						</div>
 						<div className="col-md-6">
 							<SectionTitle title="Certifications" />
-							<h3>Certifications Section will be added later</h3>
+							<Certifications />
 						</div>
 					</div>
 				</div>
