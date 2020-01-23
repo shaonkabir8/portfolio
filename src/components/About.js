@@ -6,7 +6,7 @@ import AboutStyle from "../styles/AboutStyle"
 const About = () => {
 	return (
 		<AboutStyle>
-			<div clssName="about-section section-padding">
+			<div className="about-section section-padding">
 				<div className="container">
 					<SectionTitle title="About me" />
 					<div className="row">
@@ -14,7 +14,7 @@ const About = () => {
 							<div className="about-image">
 								<img
 									src="https://i.postimg.cc/4dPBXcLR/myPhoto.png"
-									alt="Photo of myself"
+									alt="Shaon_Kabir"
 								/>
 							</div>
 							<div className="hover">

@@ -1,11 +1,11 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import PortfolioCardStyle from "../styles/PortfolioCardStyle"
 
 const PortfolioCard = props => {
 	// grab project images to pass them as prop
-	const data = useStaticQuery(graphql`
+	useStaticQuery(graphql`
 		query myImgQuery {
 			car: file(relativePath: { eq: "car.jpg" }) {
 				childImageSharp {
@@ -87,7 +87,12 @@ const PortfolioCard = props => {
 							View Code
 							<i className="fab fa-github"></i>
 						</a>
-						<a href={props.liveDemo} target="_blank" className="boxed-btn">
+						<a
+							href={props.liveDemo}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="boxed-btn"
+						>
 							Live Demo
 							<i className="fas fa-link"></i>
 						</a>

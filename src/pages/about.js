@@ -16,7 +16,7 @@ const About = () => {
 							<div className="about-image">
 								<img
 									src="https://i.postimg.cc/4dPBXcLR/myPhoto.png"
-									alt="Photo of myself"
+									alt="Shaon_Kabir"
 								/>
 							</div>
 							<div className="hover">

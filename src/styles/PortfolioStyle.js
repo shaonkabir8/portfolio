@@ -4,7 +4,7 @@ const PortfolioStyle = styled.div`
 	.filter-menu {
 		margin-bottom: 25px;
 	}
-	.filter-menu li {
+	.filter-menu button {
 		display: inline-block;
 		color: ${props => props.theme.gradient};
 		border: 1px solid;

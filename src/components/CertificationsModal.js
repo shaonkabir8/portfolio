@@ -85,14 +85,13 @@ function CertificationsModal() {
                   </p>
                 </span>
               </h3>
-              <a
-                href="#"
+              <button
                 className="boxed-btn modalBtn"
                 data-toggle="modal"
                 data-target="#exampleModal"
               >
-                Load more <i class="fas fa-long-arrow-alt-right"></i>
-              </a>
+                Load more <i className="fas fa-long-arrow-alt-right"></i>
+              </button>
             </div>
           </ModalStyle>
         </Modal.Body>

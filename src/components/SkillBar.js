@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react"
+import React, { useEffect } from "react"
 import * as $ from "jquery"
 import SkillStyle from "../styles/SkillStyle"
 
@@ -29,54 +29,54 @@ const SkillBar = () => {
 	return (
 		<SkillStyle>
 			<div id="skill-bar-wrapper">
-				<div class="text-left">
+				<div className="text-left">
 					HTML<span>90%</span>
-					<div class="skillbar-container clearfix" data-percent="90%">
-						<div class="html skills" />
+					<div className="skillbar-container clearfix" data-percent="90%">
+						<div className="html skills" />
 					</div>
 					CSS<span>85%</span>
-					<div class="skillbar-container clearfix" data-percent="85%">
-						<div class="css skills" />
+					<div className="skillbar-container clearfix" data-percent="85%">
+						<div className="css skills" />
 					</div>
 					JavaScript<span>80%</span>
-					<div class="skillbar-container clearfix" data-percent="80%">
-						<div class="javaScript skills" />
+					<div className="skillbar-container clearfix" data-percent="80%">
+						<div className="javaScript skills" />
 					</div>
 					React<span>70%</span>
-					<div class="skillbar-container clearfix" data-percent="70%">
-						<div class="react skills" />
+					<div className="skillbar-container clearfix" data-percent="70%">
+						<div className="react skills" />
 					</div>
 					GraphQL<span>40%</span>
-					<div class="skillbar-container clearfix" data-percent="40%">
-						<div class="graphql skills" />
+					<div className="skillbar-container clearfix" data-percent="40%">
+						<div className="graphql skills" />
 					</div>
 					AJAX and API<span>50%</span>
-					<div class="skillbar-container clearfix" data-percent="50%">
-						<div class="ajax skills" />
+					<div className="skillbar-container clearfix" data-percent="50%">
+						<div className="ajax skills" />
 					</div>
 					jQuery<span>85%</span>
-					<div class="skillbar-container clearfix" data-percent="85%">
-						<div class="jquery skills" />
+					<div className="skillbar-container clearfix" data-percent="85%">
+						<div className="jquery skills" />
 					</div>
 					Git<span>60%</span>
-					<div class="skillbar-container clearfix" data-percent="60%">
-						<div class="git skills" />
+					<div className="skillbar-container clearfix" data-percent="60%">
+						<div className="git skills" />
 					</div>
 					Sass<span>40%</span>
-					<div class="skillbar-container clearfix" data-percent="40%">
-						<div class="sass skills" />
+					<div className="skillbar-container clearfix" data-percent="40%">
+						<div className="sass skills" />
 					</div>
 					PSD to HTML<span>90%</span>
-					<div class="skillbar-container clearfix" data-percent="90%">
-						<div class="psd skills" />
+					<div className="skillbar-container clearfix" data-percent="90%">
+						<div className="psd skills" />
 					</div>
 					Bootstrap<span>90%</span>
-					<div class="skillbar-container clearfix" data-percent="90%">
-						<div class="bootstrap skills" />
+					<div className="skillbar-container clearfix" data-percent="90%">
+						<div className="bootstrap skills" />
 					</div>
 					Photoshop<span>40%</span>
-					<div class="skillbar-container clearfix" data-percent="40%">
-						<div class="photoShop skills" />
+					<div className="skillbar-container clearfix" data-percent="40%">
+						<div className="photoShop skills" />
 					</div>
 				</div>
 			</div>

@@ -2,9 +2,7 @@ import React, { Fragment, useState, useEffect } from "react"
 import Isotope from "isotope-layout"
 import { graphql, useStaticQuery } from "gatsby"
 import PortfolioStyle from "../styles/PortfolioStyle"
-import ProjectItem from "./ProjectItem"
 import PortfolioCard from "./PortfolioCard"
-import PortfolioSectionImg from "../images/stackoverflow.png"
 
 const PortfolioItem = () => {
   // store the isotope object in one state
@@ -71,13 +69,38 @@ const PortfolioItem = () => {
           <div className="container">
             <div className="row">
               <div className="col-md-12">
-                <ul className="filter-menu">
-                  <li onClick={() => setFilterKey("*")}>All</li>
-                  <li onClick={() => setFilterKey("javaScript")}>JavaScript</li>
-                  <li onClick={() => setFilterKey("react")}>React</li>
-                  <li onClick={() => setFilterKey("gatsby")}>Gatsby</li>
-                  <li onClick={() => setFilterKey("wordpress")}>Wordpress</li>
-                </ul>
+                <div className="filter-menu">
+                  <button
+                    onClick={() => setFilterKey("*")}
+                    onKeyDown={() => setFilterKey("")}
+                  >
+                    All
+                  </button>
+                  <button
+                    onClick={() => setFilterKey("javaScript")}
+                    onKeyUp={() => setFilterKey("javaScript")}
+                  >
+                    JavaScript
+                  </button>
+                  <button
+                    onClick={() => setFilterKey("react")}
+                    onKeyPress={() => setFilterKey("react")}
+                  >
+                    React
+                  </button>
+                  <button
+                    onClick={() => setFilterKey("gatsby")}
+                    onKeyDown={() => setFilterKey("gatsby")}
+                  >
+                    Gatsby
+                  </button>
+                  <button
+                    onClick={() => setFilterKey("wordpress")}
+                    onKeyDown={() => setFilterKey("wordpress")}
+                  >
+                    Wordpress
+                  </button>
+                </div>
               </div>
             </div>
             <div className="row filter-container">

@@ -29,7 +29,7 @@ const HeroSection = () => {
               </div>
             </div>
             <Link to="/" className="scrollIcon">
-              <i class="fas fa-angle-down"></i>
+              <i className="fas fa-angle-down"></i>
             </Link>
           </div>
         </div>
