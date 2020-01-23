@@ -14,6 +14,7 @@ const PortfolioItem = () => {
   useEffect(() => {
     setIsotope(
       new Isotope(".filter-container", {
+        layoutMode: "masonry",
         itemSelector: ".filter-item",
       })
     )
@@ -111,7 +112,7 @@ const PortfolioItem = () => {
                 date="10 January 2020"
                 githubLink="#"
                 liveDemo="#"
-                className="col-md-4 filter-item react"
+                className="col-md-6 filter-item react"
               />
               <PortfolioCard
                 imgSrc={data.car.childImageSharp.fluid}
@@ -120,7 +121,7 @@ const PortfolioItem = () => {
                 date="10 January 2020"
                 githubLink="#"
                 liveDemo="#"
-                className="col-md-4 filter-item react"
+                className="col-md-6 filter-item react"
               />
               <PortfolioCard
                 imgSrc={data.snowfall.childImageSharp.fluid}
@@ -129,7 +130,7 @@ const PortfolioItem = () => {
                 date="10 January 2020"
                 githubLink="#"
                 liveDemo="#"
-                className="col-md-4 filter-item gatsby"
+                className="col-md-6 filter-item gatsby"
               />
             </div>
           </div>

@@ -21,7 +21,7 @@ const PortfolioCardStyle = styled.div`
 	}
 	.card:hover .card-hover {
 		visibility: visible;
-		opacity: 1;
+		opacity: 0.8;
 	}
 	.boxed-btn {
 		display: inline-block;
