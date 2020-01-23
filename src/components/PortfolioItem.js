@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react"
 import Isotope from "isotope-layout"
+import { graphql, useStaticQuery } from "gatsby"
 import PortfolioStyle from "../styles/PortfolioStyle"
 import ProjectItem from "./ProjectItem"
 import PortfolioCard from "./PortfolioCard"
@@ -29,6 +30,40 @@ const PortfolioItem = () => {
     }
   }, [isotope, filterKey])
 
+  // grab project images to pass them as prop
+  const data = useStaticQuery(graphql`
+    query grabImages {
+      car: file(relativePath: { eq: "car.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, maxHeight: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      city: file(relativePath: { eq: "chinaCity.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, maxHeight: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      snowfall: file(relativePath: { eq: "snowfall.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, maxHeight: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      building: file(relativePath: { eq: "building.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 400, maxHeight: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Fragment>
       <PortfolioStyle>
@@ -47,7 +82,7 @@ const PortfolioItem = () => {
             </div>
             <div className="row filter-container">
               <PortfolioCard
-                imgSrc={PortfolioSectionImg}
+                imgSrc={data.city.childImageSharp.fluid}
                 title="Cool Website"
                 desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati minus qui, non ut animi."
                 date="10 January 2020"
@@ -56,7 +91,7 @@ const PortfolioItem = () => {
                 className="col-md-4 filter-item react"
               />
               <PortfolioCard
-                imgSrc={PortfolioSectionImg}
+                imgSrc={data.car.childImageSharp.fluid}
                 title="Website"
                 desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati minus qui, non ut animi."
                 date="10 January 2020"
@@ -65,7 +100,7 @@ const PortfolioItem = () => {
                 className="col-md-4 filter-item react"
               />
               <PortfolioCard
-                imgSrc={PortfolioSectionImg}
+                imgSrc={data.snowfall.childImageSharp.fluid}
                 title="Awesome ?"
                 desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati minus qui, non ut animi."
                 date="10 January 2020"
