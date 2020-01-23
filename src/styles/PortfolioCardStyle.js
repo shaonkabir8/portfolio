@@ -52,5 +52,28 @@ const PortfolioCardStyle = styled.div`
 	.stack-image {
 		margin-top: 50px;
 	}
+	.stack-image ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.stack-image li {
+		display: inline-block;
+		color: #fff;
+		text-align: center;
+	}
+	.stack-image li img {
+		width: 50px;
+		height: 42px;
+	}
+	.stack-image span {
+		display: block;
+		font-size: 60%;
+		color: #000;
+		font-weight: bold;
+		padding-left: 9px;
+		margin-top: 9px;
+		margin-bottom: 19px;
+	}
 `
 export default PortfolioCardStyle
