@@ -59,19 +59,19 @@ const Header = props => {
 											<Link to="/">Home</Link>
 										</li>
 										<li>
-											<Link to="/">About</Link>
+											<Link to="#about">About</Link>
 										</li>
 										<li>
-											<Link to="/">Skills</Link>
+											<Link to="#skill">Skills</Link>
 										</li>
 										<li>
-											<Link to="/">Portfolio</Link>
+											<Link to="#portfolio">Portfolio</Link>
 										</li>
 										<li>
-											<Link to="/">Blog</Link>
+											<Link to="/blog">Blog</Link>
 										</li>
 										<li>
-											<Link to="/">Contact</Link>
+											<Link to="#contact">Contact</Link>
 										</li>
 									</ul>
 								</nav>
