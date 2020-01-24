@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react"
-import Isotope from "isotope-layout"
+// import Isotope from "isotope-layout"
 import { graphql, useStaticQuery } from "gatsby"
 import PortfolioStyle from "../styles/PortfolioStyle"
 import PortfolioCard from "./PortfolioCard"
@@ -11,6 +11,7 @@ const PortfolioItem = () => {
   const [filterKey, setFilterKey] = useState("*")
 
   // initialize an Isotope object with configs
+  /*
   useEffect(() => {
     setIsotope(
       new Isotope(".filter-container", {
@@ -28,6 +29,7 @@ const PortfolioItem = () => {
         : isotope.arrange({ filter: `.${filterKey}` })
     }
   }, [isotope, filterKey])
+  */
 
   // grab project images to pass them as prop
   const data = useStaticQuery(graphql`
