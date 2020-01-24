@@ -4,14 +4,13 @@ const CertificationsStyle = styled.div`
   .certification-section h3 span {
     font-size: 65%;
     font-weight: normal;
-    font-style: italic;
     margin-top: 12px;
     margin-left: 6px;
   }
   .certification-section h3 {
     font-size: 23px;
-    font-style: italic;
     padding-bottom: 12px;
+    font-weight: 700;
   }
   .certification-section p {
     margin-bottom: 0;
