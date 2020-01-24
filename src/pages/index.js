@@ -7,6 +7,7 @@ import HeroSection from "../components/HeroSection"
 import About from "../components/About"
 import Portfolio from "../components/Portfolio"
 import Skills from "../components/Skills"
+import WorkProcess from "../components/WorkProcess"
 
 const theme = {
 	transition: "all 0.2s linear",
@@ -25,6 +26,7 @@ const index = props => {
 				<Header />
 				<HeroSection />
 				<About />
+				<WorkProcess />
 				<Skills />
 				<Portfolio />
 			</div>
