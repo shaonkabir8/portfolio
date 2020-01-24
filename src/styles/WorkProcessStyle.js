@@ -61,8 +61,9 @@ const WorkProcessStyle = styled.div`
 		top: 50%;
 		width: 86px;
 		z-index: 20;
-		color: #3a3939;
-		background: yellow;
+		color: #ffffff;
+		background: ${props => props.theme.gradient};
+		box-shadow: 0 0 4px #d6d6cd;
 	}
 	.work-process > .item > .item-content > .icon-arrow {
 		bottom: 0;
