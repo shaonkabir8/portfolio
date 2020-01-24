@@ -9,6 +9,7 @@ import WorkProcess from "../components/WorkProcess"
 import Skills from "../components/Skills"
 import Portfolio from "../components/Portfolio"
 import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 
 const theme = {
 	transition: "all 0.2s linear",
@@ -31,6 +32,7 @@ const index = props => {
 				<Skills />
 				<Portfolio />
 				<Contact />
+				<Footer />
 			</div>
 		</ThemeProvider>
 	)
