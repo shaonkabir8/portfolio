@@ -5,9 +5,10 @@ import Head from "../components/Head"
 import GlobalStyle from "../styles/GlobalStyle"
 import HeroSection from "../components/HeroSection"
 import About from "../components/About"
-import Portfolio from "../components/Portfolio"
-import Skills from "../components/Skills"
 import WorkProcess from "../components/WorkProcess"
+import Skills from "../components/Skills"
+import Portfolio from "../components/Portfolio"
+import Contact from "../components/Contact"
 
 const theme = {
 	transition: "all 0.2s linear",
@@ -29,6 +30,7 @@ const index = props => {
 				<WorkProcess />
 				<Skills />
 				<Portfolio />
+				<Contact />
 			</div>
 		</ThemeProvider>
 	)
