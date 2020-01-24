@@ -4,6 +4,7 @@ const WorkProcessStyle = styled.div`
 	#work-process {
 		background: ${props => props.theme.gradient};
 		color: #fff;
+		padding-bottom: 50px;
 	}
 	.work-process > .item {
 		padding: 0;
