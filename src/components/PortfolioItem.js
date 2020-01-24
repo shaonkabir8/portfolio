@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react"
+import React, { Fragment, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import PortfolioStyle from "../styles/PortfolioStyle"
 import PortfolioCard from "./PortfolioCard"
@@ -37,6 +37,44 @@ const PortfolioItem = () => {
       }
     }
   `)
+
+  const [visible, setVisible] = useState(false)
+
+  // setVisible Handler
+  const showItem = () => {
+    setVisible(true)
+  }
+
+  // define Project as empty initially
+  let moreItem = ""
+
+  if (visible) {
+    moreItem = (
+      <div className="row">
+        <div className="col-md-6">
+          <PortfolioCard
+            imgSrc={data.city.childImageSharp.fluid}
+            title="Cool Website"
+            desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati minus qui, non ut animi."
+            date="10 January 2020"
+            githubLink="#"
+            liveDemo="#"
+          />
+        </div>
+        <div className="col-md-6">
+          <PortfolioCard
+            imgSrc={data.car.childImageSharp.fluid}
+            title="Website"
+            desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati minus qui, non ut animi."
+            date="10 January 2020"
+            githubLink="#"
+            liveDemo="#"
+          />
+        </div>
+      </div>
+    )
+    document.querySelector(".loadMoreBtn").style.display = "none"
+  }
 
   return (
     <Fragment>
@@ -87,12 +125,13 @@ const PortfolioItem = () => {
                 />
               </div>
             </div>
+            {moreItem}
             <div className="row">
               <div className="col-md-6 offset-md-3 text-center">
-                <a href="" className="boxed-btn loadMoreBtn">
+                <button className="boxed-btn loadMoreBtn" onClick={showItem}>
                   Load More Projects
                   <i className="fas fa-long-arrow-alt-right"></i>
-                </a>
+                </button>
               </div>
             </div>
           </div>
