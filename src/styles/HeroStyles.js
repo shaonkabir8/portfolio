@@ -1,10 +1,16 @@
 import styled from "styled-components"
+import HeroBg from "../images/hero-bg.jpg"
 
 const HeroStyles = styled.div`
   .hero-area {
     text-align: center;
     padding: 80px 0;
     position: relative;
+    z-index: 3;
+    background-image: url(${HeroBg});
+    background-size: cover;
+    background-position: center;
+    color: #fff;
   }
   .hero-area::after {
     position: absolute;
@@ -14,7 +20,7 @@ const HeroStyles = styled.div`
     height: 100%;
     content: "";
     z-index: -1;
-    opacity: 0.9;
+    opacity: 0.6;
     background: ${props => props.theme.bg};
     background: ${props => props.theme.gradient};
   }
