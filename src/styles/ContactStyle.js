@@ -100,36 +100,7 @@ const ContactStyle = styled.div`
 	.contact-information h2 {
 		margin-bottom: 35px;
 	}
-	.contact-form .boxed-btn {
-		border: 1px solid;
-		position: relative;
-		z-index: 1;
-		color: #542c85;
-		padding: 10px 15px;
-		border-radius: 5px;
-		display: inline-block;
-	}
-	.contact-form .boxed-btn:hover {
-		color: #fff;
-		text-decoration:none;
-	}
-	.contact-form .boxed-btn:after {
-		position: absolute;
-		left: 0;
-		top:0;
-		width: 0;
-		height: 100%;
-		content: '';
-		background: #542c85;
-		z-index: -1;
-		color:#fff;
-		border-radius: 5px;
-	}
-	.contact-form .boxed-btn:hover:after {
-		width: 100%;
-		color: #fff;
-		transition: all .4s linear;
-	}
+	
 	input[type="text"]:focus,
 	input[type="email"]:focus,
 	input[type="date"]:focus,
