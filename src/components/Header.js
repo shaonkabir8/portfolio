@@ -1,9 +1,30 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Helmet from "react-helmet"
 import { Link } from "gatsby"
+import * as $ from "jquery"
 import HeaderStyle from "../styles/HeaderStyle"
 
 const Header = props => {
+	useEffect(() => {
+		$(window).scroll(function() {
+			let scroll = $(window).scrollTop()
+			const header = document.querySelector(".header")
+			if (scroll > 500) {
+				header.setAttribute(
+					"style",
+					"background: #1a1154; position: fixed; transition: all .4s linear"
+				)
+				// Custom CSS written and that's will trigger while hovering after scroll
+				header.classList.add("fixed")
+			} else {
+				header.setAttribute(
+					"style",
+					"background: transparent; position: absolute;"
+				)
+				header.classList.remove("fixed")
+			}
+		})
+	})
 	return (
 		<HeaderStyle>
 			<Helmet>

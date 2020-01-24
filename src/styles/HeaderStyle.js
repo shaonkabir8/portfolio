@@ -168,6 +168,9 @@ const HeaderStyle = styled.div`
 		border-color: transparent;
 		transition: all 0.2s linear;
 	}
+	.mainmenu ul {
+		margin: 0 !important;
+	}
 	.mainmenu li {
 		display: inline-block;
 	}
