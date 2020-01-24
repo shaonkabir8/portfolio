@@ -6,7 +6,7 @@ import AboutStyle from "../styles/AboutStyle"
 const About = () => {
 	return (
 		<AboutStyle>
-			<div className="about-section section-padding">
+			<div className="about-section ">
 				<div className="container">
 					<SectionTitle title="About me" />
 					<div className="row">

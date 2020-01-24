@@ -6,8 +6,9 @@ const AboutCardStyle = styled.div`
     box-shadow: 0 0 10px #929191;
     padding: 35px;
     background: #fff;
-    margin: 150px 60px;
+    margin: 90px 60px;
     font-size: 15px;
+    margin-bottom: 0;
   }
   .about-info i {
     margin-right: 15px;
