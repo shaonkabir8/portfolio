@@ -7,28 +7,28 @@ const PortfolioItem = () => {
   // grab project images to pass them as prop
   const data = useStaticQuery(graphql`
     query grabImages {
-      car: file(relativePath: { eq: "car.jpg" }) {
+      creative: file(relativePath: { eq: "creative.png" }) {
         childImageSharp {
           fluid(maxWidth: 400, maxHeight: 250) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      city: file(relativePath: { eq: "chinaCity.jpg" }) {
+      pirlox: file(relativePath: { eq: "pirlox.png" }) {
         childImageSharp {
           fluid(maxWidth: 400, maxHeight: 250) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      snowfall: file(relativePath: { eq: "snowfall.jpg" }) {
+      tinyone: file(relativePath: { eq: "tinyone.png" }) {
         childImageSharp {
           fluid(maxWidth: 400, maxHeight: 250) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      building: file(relativePath: { eq: "building.jpg" }) {
+      portfolio: file(relativePath: { eq: "portfolio.png" }) {
         childImageSharp {
           fluid(maxWidth: 400, maxHeight: 250) {
             ...GatsbyImageSharpFluid
@@ -53,22 +53,22 @@ const PortfolioItem = () => {
       <div className="row">
         <div className="col-md-6">
           <PortfolioCard
-            imgSrc={data.city.childImageSharp.fluid}
-            title="Cool Website"
-            desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati minus qui, non ut animi."
-            date="10 January 2020"
-            githubLink="#"
-            liveDemo="#"
+            imgSrc={data.pirlox.childImageSharp.fluid}
+            title="Pirlox Template"
+            desc="Personal Portfolio Template named Pirlox. It's a static website build with HTML, CSS and JavaScript. Few Coolest animation used using jQuery. Bootstrap is used for Better User Interface and Mobile friendly"
+            date="15 November 2019"
+            githubLink="https://github.com/Shaonkabir/creative-template"
+            liveDemo="https://shaonkabir.github.io/pirlox"
           />
         </div>
         <div className="col-md-6">
           <PortfolioCard
-            imgSrc={data.car.childImageSharp.fluid}
-            title="Website"
-            desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati minus qui, non ut animi."
-            date="10 January 2020"
-            githubLink="#"
-            liveDemo="#"
+            imgSrc={data.creative.childImageSharp.fluid}
+            title="Creative Template"
+            desc="Creative Template for Multipurposes. Basically It's about a Business Agency but this template can be used as a personal portfolio template"
+            date="18 Octobor 2019"
+            githubLink="https://github.com/Shaonkabir/creative-template"
+            liveDemo="https://shaonkabir.github.io/creative-template"
           />
         </div>
       </div>
@@ -84,44 +84,44 @@ const PortfolioItem = () => {
             <div className="row">
               <div className="col-md-6">
                 <PortfolioCard
-                  imgSrc={data.city.childImageSharp.fluid}
-                  title="Cool Website"
-                  desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati minus qui, non ut animi."
-                  date="10 January 2020"
-                  githubLink="#"
-                  liveDemo="#"
+                  imgSrc={data.creative.childImageSharp.fluid}
+                  title="Creative Template"
+                  desc="Creative Template for Multipurposes. Basically It's about a Business Agency but this template can be used as a personal portfolio template"
+                  date="18 Octobor 2019"
+                  githubLink="https://github.com/Shaonkabir/creative-template"
+                  liveDemo="https://shaonkabir.github.io/creative-template"
                 />
               </div>
               <div className="col-md-6">
                 <PortfolioCard
-                  imgSrc={data.car.childImageSharp.fluid}
-                  title="Website"
-                  desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati minus qui, non ut animi."
-                  date="10 January 2020"
-                  githubLink="#"
-                  liveDemo="#"
+                  imgSrc={data.pirlox.childImageSharp.fluid}
+                  title="Pirlox Template"
+                  desc="Personal Portfolio Template named Pirlox. It's a static website build with HTML, CSS and JavaScript. Few Coolest animation used using jQuery. Bootstrap is used for Better User Interface and Mobile friendly"
+                  date="15 November 2019"
+                  githubLink="https://github.com/Shaonkabir/creative-template"
+                  liveDemo="https://shaonkabir.github.io/pirlox"
                 />
               </div>
             </div>
             <div className="row">
               <div className="col-md-6">
                 <PortfolioCard
-                  imgSrc={data.snowfall.childImageSharp.fluid}
-                  title="Awesome ?"
-                  desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati minus qui, non ut animi."
-                  date="10 January 2020"
-                  githubLink="#"
-                  liveDemo="#"
+                  imgSrc={data.tinyone.childImageSharp.fluid}
+                  title="Tinyone Template v.01"
+                  desc="Tinyone Template for self Branding to showcase services to world. It's petty nice and clean design."
+                  date="25 November 2019"
+                  githubLink="https://github.com/Shaonkabir/tinyone"
+                  liveDemo="https://shaonkabir.github.io/tinyone"
                 />
               </div>
               <div className="col-md-6">
                 <PortfolioCard
-                  imgSrc={data.building.childImageSharp.fluid}
-                  title="Building"
-                  desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat obcaecati minus qui, non ut animi."
-                  date="14 January 2020"
-                  githubLink="#"
-                  liveDemo="#"
+                  imgSrc={data.portfolio.childImageSharp.fluid}
+                  title="Personal Portfolio"
+                  desc="Personal Portfolio Template for one of my coligue of a local IT farm. Build this for my coligue interview and Self Branding"
+                  githubLink="https://github.com/Shaonkabir/portfolio-two"
+                  date="14 September 2019"
+                  liveDemo="https://shaonkabir.github.io/portfolio-two"
                 />
               </div>
             </div>

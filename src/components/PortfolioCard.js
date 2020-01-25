@@ -7,30 +7,30 @@ const PortfolioCard = props => {
 	// grab project images to pass them as prop
 	useStaticQuery(graphql`
 		query myImgQuery {
-			car: file(relativePath: { eq: "car.jpg" }) {
+			creative: file(relativePath: { eq: "creative.png" }) {
 				childImageSharp {
-					fluid {
+					fluid(maxWidth: 400, maxHeight: 250) {
 						...GatsbyImageSharpFluid
 					}
 				}
 			}
-			city: file(relativePath: { eq: "chinaCity.jpg" }) {
+			pirlox: file(relativePath: { eq: "pirlox.png" }) {
 				childImageSharp {
-					fluid {
+					fluid(maxWidth: 400, maxHeight: 250) {
 						...GatsbyImageSharpFluid
 					}
 				}
 			}
-			snowfall: file(relativePath: { eq: "snowfall.jpg" }) {
+			tinyone: file(relativePath: { eq: "tinyone.png" }) {
 				childImageSharp {
-					fluid(maxHeight: 325) {
+					fluid(maxWidth: 400, maxHeight: 250) {
 						...GatsbyImageSharpFluid
 					}
 				}
 			}
-			building: file(relativePath: { eq: "building.jpg" }) {
+			portfolio: file(relativePath: { eq: "portfolio.png" }) {
 				childImageSharp {
-					fluid {
+					fluid(maxWidth: 400, maxHeight: 250) {
 						...GatsbyImageSharpFluid
 					}
 				}
