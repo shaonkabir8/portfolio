@@ -198,11 +198,6 @@ const HeaderStyle = styled.div`
 	}
 	.header {
 		padding: 15px;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		z-index: 99;
 	}
 	.header.fixed .mainmenu ul li a {
 		color: #fff;
