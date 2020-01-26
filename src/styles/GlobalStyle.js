@@ -12,15 +12,16 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Merriweather',serif;
     font-size: 16px;
     line-height: 1.7;
+    background: ${props => props.theme.color.bg} !important;
+    color: #fff;
   }
-    h1,
+  h1,
 	h2,
 	h3,
 	h4,
 	h5,
 	h6 {
 		margin: 0 0 15px;
-		font-weight: 700;
 		font-weight: 700;
 		font-family: 'Lora', serif;
 	}
@@ -36,13 +37,15 @@ const GlobalStyle = createGlobalStyle`
 	}
 
   .boxed-btn {
-    border: 1px solid;
+    display: inline-block;
     position: relative;
     z-index: 1;
-    color: #542c85;
-    padding: 10px 15px;
-    border-radius: 5px;
-    display: inline-block;
+    border: 2px solid ${props => props.theme.color.border};
+    color: hsla(0,0%,100%,.85);
+    background: transparent;
+    padding: 5px 25px;
+    margin-right: 15px;
+    border-radius: 4px;
   }
   .boxed-btn:hover {
     color: #fff;
@@ -55,14 +58,11 @@ const GlobalStyle = createGlobalStyle`
     width: 0;
     height: 100%;
     content: '';
-    background: #542c85;
+    background: ${props => props.theme.color.green};
     z-index: -1;
-    color:#fff;
-    border-radius: 5px;
   }
   .boxed-btn:hover:after {
     width: 100%;
-    color: #fff;
     transition: all .4s linear;
   }
 
