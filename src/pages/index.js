@@ -42,9 +42,9 @@ const Index = props => {
 		</div>
 	)
 
-	if (loading) {
-		spniner = <Spinner />
-	}
+	// if (loading) {
+	// 	spniner = <Spinner />
+	// }
 
 	useEffect(() => {
 		setTimeout(() => {
