@@ -1,36 +1,29 @@
 import React from "react"
-import Typed from "react-typed"
 import { Link } from "gatsby"
 import HeroStyles from "../styles/HeroStyles"
 
 const HeroSection = () => {
-  const strings = [
-    "A JavaScript Lover",
-    "A Dedicated Frontend Developer",
-    "An Open Sources Entusiast",
-    "A Dreamer",
-  ]
   return (
     <HeroStyles>
       <div className="hero-area">
         <div className="container">
           <div className="row">
-            <div className="col-md-12 text-center">
+            <div className="col-md-8">
               <div className="hero-text">
-                <h1>Hello, I'm Shaon Kabir</h1>
-                <h4>
-                  <Typed
-                    strings={strings}
-                    typeSpeed={40}
-                    backSpeed={50}
-                    loop={true}
-                  />
-                </h4>
+                <h4>Hello, I'm</h4>
+                <h1>Shaon Kabir</h1>
+                <h3>Interactive Front-end Developer</h3>
+              </div>
+              <Link className="boxed-btn" to="#about">
+                About me
+              </Link>
+            </div>
+            <div className="col-md-4 text-right">
+              <div className="social-logo">
+                {/* Social Logo will be added here*/}
+                {/* Icon should be SVG for better styling*/}
               </div>
             </div>
-            <Link to="/" className="scrollIcon">
-              <i className="fas fa-angle-down"></i>
-            </Link>
           </div>
         </div>
       </div>
