@@ -14,7 +14,12 @@ import Footer from "../components/Footer"
 
 const theme = {
 	transition: "all 0.2s linear",
-	bg: "#663399",
+	color: {
+		bg: "#111a28",
+		border: "#00cf5d",
+		green: "#0bda51",
+		light: "#1d293a",
+	},
 	gradient: "linear-gradient(135deg,  #542c85 1%,#b06ab3 76%)",
 	gradient_filter:
 		"progid:DXImageTransform.Microsoft.gradient( startColorstr='#542c85', endColorstr='#b06ab3',GradientType=1 )",
