@@ -26,6 +26,23 @@ const HeroStyles = styled.div`
     font-style: italic;
     font-size: 25px;
   }
+  .social-logo ul {
+    padding: 5px;
+    background-color: #111a28;
+  }
+
+  .social-logo ul li {
+    margin-bottom: 10px;
+  }
+
+  .social-logo ul li a {
+    color: rgba(223, 223, 223, 0.85);
+    font-size: 30px;
+    transition: color 0.4s linear;
+  }
+  .social-logo ul li a:hover {
+    color: #fff;
+  }
 `
 
 export default HeroStyles
