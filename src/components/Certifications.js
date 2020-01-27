@@ -1,6 +1,7 @@
 import React from "react"
 import CertificationsStyle from "../styles/CertificationsStyle"
 import CertificationsModal from "../components/CertificationsModal"
+import Button from "../ui/Button"
 
 const Certifications = () => {
   return (
@@ -59,13 +60,13 @@ const Certifications = () => {
             </p>
           </span>
         </h3>
-        <button
-          className="boxed-btn modalBtn"
+        <Button
+          id="modalBtn"
+          text="Load more"
+          icon="hello"
           data-toggle="modal"
           data-target="#exampleModal"
-        >
-          Load more <i className="fas fa-long-arrow-alt-right"></i>
-        </button>
+        />
         <CertificationsModal />
       </div>
     </CertificationsStyle>

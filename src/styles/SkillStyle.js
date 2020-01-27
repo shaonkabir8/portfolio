@@ -42,7 +42,7 @@ const SkillStyle = styled.div`
 		background: #4594cc;
 	}
 	.jquery {
-		background: #000;
+		background: #1b74ba;
 	}
 	.git {
 		background: #f05033;

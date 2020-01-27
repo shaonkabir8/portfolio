@@ -20,29 +20,8 @@ const CertificationsStyle = styled.div`
     margin-left: 0px !important;
     font-size: 70% !important;
   }
-
-  .boxed-btn {
-    display: inline-block;
-    background: yellow;
-    color: #000;
-    font-size: 16px;
-    padding: 11px 19px;
-    text-align: center;
-    border-radius: 5px;
-    border: 1px solid yellow;
-  }
-  .boxed-btn:hover {
-    color: #000;
-    background: transparent;
-    transition: all 0.3s linear;
-  }
-  .boxed-btn svg {
-    margin-left: 6px;
-    transition: all 0.3s linear;
-  }
-  .boxed-btn:hover svg {
-    margin-left: 15px;
-    transition: all 0.3s linear;
+  #modalBtn {
+    margin-top: 22px;
   }
 `
 

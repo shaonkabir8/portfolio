@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     line-height: 1.7;
     background: ${props => props.theme.color.bg} !important;
-    color: #fff;
+    color: #fff !important;
   }
   h1,
 	h2,
@@ -64,6 +64,9 @@ const GlobalStyle = createGlobalStyle`
   .boxed-btn:hover:after {
     width: 100%;
     transition: all .4s linear;
+  }
+  .modal-content {
+    background: ${props => props.theme.color.light} !important;
   }
 
 `

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
-import { Button, Modal } from "react-bootstrap"
+import { Modal } from "react-bootstrap"
 import ModalStyle from "../styles/ModalStyle"
+import Button from "../ui/Button"
 
 function CertificationsModal() {
   const [show, setShow] = useState(false)
@@ -9,7 +10,7 @@ function CertificationsModal() {
   const handleShow = () => setShow(true)
 
   useEffect(() => {
-    const modalBtn = document.querySelector(".modalBtn")
+    const modalBtn = document.querySelector("#modalBtn")
     modalBtn.addEventListener("click", handleShow)
   })
 
@@ -17,11 +18,13 @@ function CertificationsModal() {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Courses &amp; Certifications</Modal.Title>
+          <Modal.Title style={{ color: "#0bda51" }}>
+            Courses &amp; Certifications
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <ModalStyle>
-            <div className="certification-section">
+            <div className="certification-section modalSection">
               <h3>
                 Fronted Development
                 <span>| RR Foundation - May 2017</span>
@@ -62,7 +65,6 @@ function CertificationsModal() {
                   </p>
                 </span>
               </h3>
-
               <h3>
                 React for beginner
                 <span>| Wes Bos - July 2019</span>
@@ -74,7 +76,6 @@ function CertificationsModal() {
                   </p>
                 </span>
               </h3>
-
               <h3>
                 Advanced React with GraphQl
                 <span>| Wes Bos - Septembor 2019</span>
@@ -85,20 +86,18 @@ function CertificationsModal() {
                   </p>
                 </span>
               </h3>
-              <button
-                className="boxed-btn modalBtn"
-                data-toggle="modal"
-                data-target="#exampleModal"
-              >
-                Load more <i className="fas fa-long-arrow-alt-right"></i>
-              </button>
             </div>
           </ModalStyle>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
+          <Button
+            id="modalBtn"
+            text="Close"
+            icon="hello"
+            data-toggle="modal"
+            data-target="#exampleModal"
+            onClick={handleClose}
+          />
         </Modal.Footer>
       </Modal>
     </>
