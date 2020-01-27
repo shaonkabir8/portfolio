@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 const WorkProcessStyle = styled.div`
 	#work-process {
-		background: ${props => props.theme.gradient};
 		color: #fff;
 		padding-bottom: 50px;
 	}
@@ -36,19 +35,20 @@ const WorkProcessStyle = styled.div`
 		z-index: 10;
 	}
 	.work-process > .item > .item-content:before {
-		border-top: 1px solid #a1a1a1;
+		border-top: 1px solid ${props => props.theme.color.green};
 		height: 1px;
 		left: 0;
 		top: 50%;
 		width: 100%;
 	}
 	.work-process > .item > .item-content:after {
-		border-right: 1px dashed #a1a1a1;
+		border-right: 1px dashed ${props => props.theme.color.green};
 		height: 100%;
 		right: 0;
 		top: -50%;
 		width: 1px;
 	}
+
 	.work-process > .item > .item-content > .icon-block {
 		display: block;
 		height: 66px;
@@ -61,9 +61,8 @@ const WorkProcessStyle = styled.div`
 		top: 50%;
 		width: 86px;
 		z-index: 20;
-		color: #ffffff;
-		background: ${props => props.theme.gradient};
-		box-shadow: 0 0 4px #d6d6cd;
+		color: ${props => props.theme.color.green};
+		background: ${props => props.theme.color.light};
 	}
 	.work-process > .item > .item-content > .icon-arrow {
 		bottom: 0;
@@ -72,6 +71,7 @@ const WorkProcessStyle = styled.div`
 		margin-left: -32px;
 		position: absolute;
 		z-index: 20;
+		color: ${props => props.theme.color.green} !important;
 	}
 	.work-process > .item > .item-content > .dot {
 		border-radius: 25%;
@@ -82,7 +82,7 @@ const WorkProcessStyle = styled.div`
 		top: 50%;
 		width: 8px;
 		z-index: 10;
-		background: #fff;
+		background: ${props => props.theme.color.green};
 	}
 	.work-process > .item > .item-content > .dot.dot-start {
 		left: 0;
