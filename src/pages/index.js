@@ -1,6 +1,5 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
-import Header from "../components/Header"
 import Head from "../components/Head"
 import GlobalStyle from "../styles/GlobalStyle"
 import HeroSection from "../components/HeroSection"
@@ -9,7 +8,7 @@ import WorkProcess from "../components/WorkProcess"
 import Skills from "../components/Skills"
 import Portfolio from "../components/Portfolio"
 import Contact from "../components/Contact"
-import Footer from "../components/Footer"
+import Layout from "../components/Layout"
 
 const theme = {
 	transition: "all 0.2s linear",
@@ -26,16 +25,16 @@ const theme = {
 const Index = props => {
 	return (
 		<ThemeProvider theme={theme}>
-			<GlobalStyle />
-			<Head title="Home" />
-			<Header />
-			<HeroSection />
-			<About />
-			<WorkProcess />
-			<Skills />
-			<Portfolio />
-			<Contact />
-			<Footer />
+			<Layout>
+				<GlobalStyle />
+				<Head title="Home" />
+				<HeroSection />
+				<About />
+				<WorkProcess />
+				<Skills />
+				<Portfolio />
+				<Contact />
+			</Layout>
 		</ThemeProvider>
 	)
 }
