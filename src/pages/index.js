@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { ThemeProvider } from "styled-components"
-import Spinner from "../components/Spinner"
 import Header from "../components/Header"
 import Head from "../components/Head"
 import GlobalStyle from "../styles/GlobalStyle"
@@ -25,10 +24,9 @@ const theme = {
 }
 
 const Index = props => {
-	const [loading, setLoading] = useState(true)
-
-	let spniner = (
-		<div>
+	return (
+		<ThemeProvider theme={theme}>
+			<GlobalStyle />
 			<Head title="Home" />
 			<Header />
 			<HeroSection />
@@ -38,23 +36,6 @@ const Index = props => {
 			<Portfolio />
 			<Contact />
 			<Footer />
-		</div>
-	)
-
-	// if (loading) {
-	// 	spniner = <Spinner />
-	// }
-
-	useEffect(() => {
-		setTimeout(() => {
-			setLoading(false)
-		}, 2000)
-	})
-
-	return (
-		<ThemeProvider theme={theme}>
-			<GlobalStyle />
-			{spniner}
 		</ThemeProvider>
 	)
 }
