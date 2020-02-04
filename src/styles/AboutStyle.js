@@ -1,67 +1,75 @@
 import styled from "styled-components"
 
 const AboutStyle = styled.div`
-	.about-image img {
-		width: 330px;
-		height: auto;
+	.gatsby-image-wrapper {
+		position: initial !important;
 	}
+
 	.image-section {
-		height: 572px;
-		font-size: 17px;
-		line-height: 2;
-		color: #fff;
-	}
-	.image-section::after {
-		position: absolute;
-		left: 0;
-		top: 0;
+		position: relative;
 		width: 100%;
-		height: 100%;
-		content: "";
-		opacity: 0;
-		transition: ${props => props.theme.transition};
-		background: ${props => props.theme.bg};
-		background: ${props => props.theme.gradient};
+		max-width: 300px;
+		margin-left: 100px;
+		.overlay {
+			&:focus {
+				outline: 0;
+			}
+		}
 	}
-	.hover {
-		position: absolute;
-		left: 0;
-		top: 0;
-		transform: translate(-50%, -50%);
-		z-index: 1;
+
+	.image-section img {
+		position: relative;
+		mix-blend-mode: multiply;
+		filter: grayscale(100%) contrast(1);
+		border-radius: 2px;
+		transition: ${props => props.theme.transition};
+	}
+
+	.image-section .overlay {
 		width: 100%;
-		padding: 80px;
-		display: none;
-		visibility: hidden;
-		transition: ${props => props.theme.transition};
+		position: relative;
+		border-radius: 2px;
+		&:hover,
+		&:focus {
+			background: transparent;
+			&:after {
+				top: 15px;
+				left: 15px;
+			}
+			img {
+				filter: none;
+				mix-blend-mode: normal;
+			}
+		}
+		&:before,
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 2px;
+			transition: ${props => props.theme.transition};
+			z-index: -1;
+		}
+		&:before {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: ${props => props.theme.color.green};
+			mix-blend-mode: screen;
+		}
+		&:after {
+			border: 2px solid ${props => props.theme.color.green};
+			top: 20px;
+			left: 20px;
+			z-index: -1;
+		}
 	}
 
-	.image-section:hover .hover {
-		left: 50%;
-		top: 55%;
-		display: block;
-		visibility: visible;
-		transition-duration: 0.2s;
-	}
-	.image-section:hover::after {
-		opacity: 0.7;
-	}
-
-	.hover .slider-btn {
-		display: inline-block;
-		border: 1px solid #030000;
-		color: #000;
-		padding: 10px 20px;
-		transition: ${props => props.theme.transition};
-		font-size: 13px;
-		margin-top: 30px;
-	}
-
-	.hover .slider-btn.active {
-		border: 1px solid #fff;
-		color: #060500;
-		background: #fffff9;
-		transition: ${props => props.theme.transition};
+	.about-content p span {
+		color: ${props => props.theme.color.green};
 	}
 `
 
