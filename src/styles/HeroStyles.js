@@ -26,9 +26,24 @@ const HeroStyles = styled.div`
     font-style: italic;
     font-size: 25px;
   }
+
+  .social-logo {
+    position: fixed;
+    left: 70px;
+    top: 28%;
+    z-index: 5;
+  }
+  .social-logo::before {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    width: 1px;
+    height: 100%;
+    content: "";
+    background: #c1c2c4;
+  }
   .social-logo ul {
     padding: 5px;
-    background-color: #111a28;
   }
 
   .social-logo ul li {
@@ -41,7 +56,36 @@ const HeroStyles = styled.div`
     transition: color 0.4s linear;
   }
   .social-logo ul li a:hover {
-    color: #fff;
+    color: ${props => props.theme.color.green};
+  }
+  .fixed-email a {
+    display: block;
+    color: #c1c2c4;
+    transform: rotate(90deg);
+    font-size: 18px;
+    transition: ${props => props.theme.transition};
+    letter-spacing: 0.1em;
+  }
+  .fixed-email a:hover {
+    color: ${props => props.theme.color.green};
+    text-decoration: none;
+  }
+  .fixed-email {
+    position: fixed;
+    right: -50px;
+    top: 48%;
+    display: block;
+    height: 200px;
+  }
+  .fixed-email::before {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    content: "";
+    background: #c1c2c4;
+    right: 123px;
+    bottom: auto;
+    top: 75%;
   }
 `
 
