@@ -28,7 +28,7 @@ const Index = props => {
 		<ThemeProvider theme={theme}>
 			<Layout>
 				<GlobalStyle />
-				<Head title="Home" />
+				<Head title="Shaon Kabir" />
 				<HeroSection />
 				<About />
 				<WorkProcess />
