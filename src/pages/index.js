@@ -17,6 +17,7 @@ const theme = {
 		border: "#00cf5d",
 		green: "#0bda51",
 		light: "#1d293a",
+		// light: rgb(23, 42, 69);
 		gradient: "linear-gradient(315deg, #63d471 0%, #233329 74%)",
 		gradient_bg: "#63d471",
 	},

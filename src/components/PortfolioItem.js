@@ -1,34 +1,12 @@
-import React, { Fragment, useState } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import PortfolioStyle from "../styles/PortfolioStyle"
-import PortfolioCard from "./PortfolioCard"
+import React from "react"
+import Img from "gatsby-image"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import PortfolioItemStyle from "../styles/PortfolioItemStyle"
 
-const PortfolioItem = () => {
-  // grab project images to pass them as prop
+const PortfolioItem = props => {
   const data = useStaticQuery(graphql`
-    query grabImages {
+    query getProjectThumbnail {
       creative: file(relativePath: { eq: "creative.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 400, maxHeight: 250) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      pirlox: file(relativePath: { eq: "pirlox.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 400, maxHeight: 250) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      tinyone: file(relativePath: { eq: "tinyone.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 400, maxHeight: 250) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      portfolio: file(relativePath: { eq: "portfolio.png" }) {
         childImageSharp {
           fluid(maxWidth: 400, maxHeight: 250) {
             ...GatsbyImageSharpFluid
@@ -38,106 +16,86 @@ const PortfolioItem = () => {
     }
   `)
 
-  const [visible, setVisible] = useState(false)
-
-  // setVisible Handler
-  const showItem = () => {
-    setVisible(true)
-  }
-
-  // define Project as empty initially
-  let moreItem = ""
-
-  if (visible) {
-    moreItem = (
-      <div className="row">
-        <div className="col-md-6">
-          <PortfolioCard
-            imgSrc={data.pirlox.childImageSharp.fluid}
-            title="Pirlox Template"
-            desc="Personal Portfolio Template named Pirlox. It's a static website build with HTML, CSS and JavaScript. Few Coolest animation used using jQuery. Bootstrap is used for Better User Interface and Mobile friendly"
-            date="15 November 2019"
-            githubLink="https://github.com/Shaonkabir/creative-template"
-            liveDemo="https://shaonkabir.github.io/pirlox"
-          />
-        </div>
-        <div className="col-md-6">
-          <PortfolioCard
-            imgSrc={data.creative.childImageSharp.fluid}
-            title="Creative Template"
-            desc="Creative Template for Multipurposes. Basically It's about a Business Agency but this template can be used as a personal portfolio template"
-            date="18 Octobor 2019"
-            githubLink="https://github.com/Shaonkabir/creative-template"
-            liveDemo="https://shaonkabir.github.io/creative-template"
-          />
-        </div>
-      </div>
-    )
-    document.querySelector(".loadMoreBtn").style.display = "none"
-  }
-
   return (
-    <Fragment>
-      <PortfolioStyle>
-        <div className="portfolio-section" id="portfolio">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6">
-                <PortfolioCard
-                  imgSrc={data.creative.childImageSharp.fluid}
-                  title="Creative Template"
-                  desc="Creative Template for Multipurposes. Basically It's about a Business Agency but this template can be used as a personal portfolio template"
-                  date="18 Octobor 2019"
-                  githubLink="https://github.com/Shaonkabir/creative-template"
-                  liveDemo="https://shaonkabir.github.io/creative-template"
-                />
-              </div>
-              <div className="col-md-6">
-                <PortfolioCard
-                  imgSrc={data.pirlox.childImageSharp.fluid}
-                  title="Pirlox Template"
-                  desc="Personal Portfolio Template named Pirlox. It's a static website build with HTML, CSS and JavaScript. Few Coolest animation used using jQuery. Bootstrap is used for Better User Interface and Mobile friendly"
-                  date="15 November 2019"
-                  githubLink="https://github.com/Shaonkabir/creative-template"
-                  liveDemo="https://shaonkabir.github.io/pirlox"
-                />
-              </div>
+    <PortfolioItemStyle>
+      <div className="container">
+        <div className="row mb-100">
+          <div className="col-md-7">
+            <div className="project-image-section">
+              <Link to="https://github.com/Shaonkabir">
+                <Img fluid={data.creative.childImageSharp.fluid} />
+              </Link>
             </div>
-            <div className="row">
-              <div className="col-md-6">
-                <PortfolioCard
-                  imgSrc={data.tinyone.childImageSharp.fluid}
-                  title="Tinyone Template v.01"
-                  desc="Tinyone Template for self Branding to showcase services to world. It's petty nice and clean design."
-                  date="25 November 2019"
-                  githubLink="https://github.com/Shaonkabir/tinyone"
-                  liveDemo="https://shaonkabir.github.io/tinyone"
-                />
+          </div>
+          <div className="col-md-5 text-right">
+            <div className="project-info-section">
+              <p className="featured">Featured Project</p>
+              <h4>
+                <Link to="https://github.com/Shaonkabir">Github Finder</Link>
+              </h4>
+              <div className="project-desc">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut,
+                  quibusdam.
+                </p>
               </div>
-              <div className="col-md-6">
-                <PortfolioCard
-                  imgSrc={data.portfolio.childImageSharp.fluid}
-                  title="Personal Portfolio"
-                  desc="Personal Portfolio Template for one of my coligue of a local IT farm. Build this for my coligue interview and Self Branding"
-                  githubLink="https://github.com/Shaonkabir/portfolio-two"
-                  date="14 September 2019"
-                  liveDemo="https://shaonkabir.github.io/portfolio-two"
-                />
-              </div>
-            </div>
-            {moreItem}
-            <div className="row">
-              <div className="col-md-6 offset-md-3 text-center">
-                <button className="boxed-btn loadMoreBtn" onClick={showItem}>
-                  Load More Projects
-                  <i className="fas fa-long-arrow-alt-right"></i>
-                </button>
+              <ul className="project-stack">
+                <li>React.js</li>
+                <li>Gatsby.js</li>
+                <li>SCSS</li>
+                <li>Contentfull</li>
+              </ul>
+              <div className="project-link">
+                <Link to="">
+                  <i className="fab fa-github"></i>
+                </Link>
+                <Link to="">
+                  <i className="fas fa-link"></i>
+                </Link>
               </div>
             </div>
           </div>
         </div>
-      </PortfolioStyle>
-    </Fragment>
+        <div className="row mb-100">
+          <div className="col-md-5 text-left">
+            <div className="project-info-section">
+              <p className="featured">Featured Project</p>
+              <h4>
+                <Link to="/">Movie Dash Board</Link>
+              </h4>
+              <div className="project-desc left-desc">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut,
+                  quibusdam.Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Aut, quibusdam.
+                </p>
+              </div>
+              <ul className="project-stack left-stack">
+                <li>React.js</li>
+                <li>Gatsby.js</li>
+                <li>SCSS</li>
+                <li>Wordpress</li>
+              </ul>
+              <div className="project-link">
+                <Link to="">
+                  <i className="fab fa-github"></i>
+                </Link>
+                <Link to="">
+                  <i className="fas fa-link"></i>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-7">
+            <div className="project-image-section">
+              <Link t="/">
+                <Img fluid={data.creative.childImageSharp.fluid} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </PortfolioItemStyle>
   )
 }
 
