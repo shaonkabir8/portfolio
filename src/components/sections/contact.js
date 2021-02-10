@@ -45,7 +45,7 @@ const StyledEmailLink = styled.a`
 
 const Contact = ({ data }) => {
   const { frontmatter, html } = data[0].node;
-  const { title, buttonText } = frontmatter;
+  const { title } = frontmatter;
   const revealContainer = useRef(null);
   useEffect(() => sr.reveal(revealContainer.current, srConfig()), []);
 
@@ -58,7 +58,7 @@ const Contact = ({ data }) => {
       <div dangerouslySetInnerHTML={{ __html: html }} />
 
       <StyledEmailLink href={`mailto:${email}`} target="_blank" rel="nofollow noopener noreferrer">
-        {buttonText}
+        Say Hello
       </StyledEmailLink>
     </StyledContainer>
   );

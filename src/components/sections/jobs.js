@@ -67,19 +67,19 @@ const StyledTabButton = styled.button`
   height: ${theme.tabHeight}px;
   padding: 0 20px 2px;
   transition: ${theme.transition};
-  border-left: 2px solid ${colors.lightestNavy};
+  border-left: 2px solid ${colors.darkGrey};
   text-align: left;
   white-space: nowrap;
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.smish};
-  color: ${props => (props.isActive ? colors.green : colors.slate)};
+  color: ${props => (props.isActive ? colors.green : colors.lightGrey)};
   ${media.tablet`padding: 0 15px 2px;`};
   ${media.thone`
     ${mixins.flexCenter};
     padding: 0 15px;
     text-align: center;
     border-left: 0;
-    border-bottom: 2px solid ${colors.lightestNavy};
+    border-bottom: 2px solid ${colors.darkGrey};
     min-width: 120px;
   `};
   &:hover,

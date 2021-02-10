@@ -2,7 +2,7 @@
 date: '2015-10-01'
 title: 'JetBlue HumanKinda'
 github: ''
-external: 'https://us.mullenlowe.com/work/humankinda/'
+external: 'http://jetbluehumankinda.com/'
 tech:
   - Tumblr
   - HTML

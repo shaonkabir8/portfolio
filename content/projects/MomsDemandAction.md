@@ -1,6 +1,6 @@
 ---
 date: '2019-11-12'
-title: 'Moms Demand Action Mobile App'
+title: 'Moms Demand Action iOS & Android Apps'
 github: ''
 external: 'https://www.upstatement.com/work/moms-demand-action/'
 ios: 'https://apps.apple.com/us/app/demand-action/id1475502876'

@@ -50,8 +50,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: ${colors.slate};
-    color: ${colors.lightestSlate};
+    background-color: ${colors.highlight};
   }
 
   #root {
@@ -132,7 +131,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:focus,
     &:active {
-      outline-color: ${colors.lightblue};
+      outline-color: ${colors.blue};
     }
   }
 
@@ -162,7 +161,7 @@ const GlobalStyle = createGlobalStyle`
 
     & > code {
       background-color: ${colors.lightNavy};
-      color: ${colors.white};
+      color: ${colors.offWhite};
       font-size: ${fontSizes.sm};
       border-radius: ${theme.borderRadius};
       padding: 0.3em 0.5em;
@@ -204,7 +203,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   hr {
-    background-color: ${colors.lightestNavy};
+    background-color: ${colors.darkGrey};
     height: 1px;
     border-width: 0px;
     border-style: initial;
@@ -216,10 +215,6 @@ const GlobalStyle = createGlobalStyle`
   code {
     font-family: ${fonts.SFMono};
     font-size: ${fontSizes.md};
-  }
-
-  #logo {
-    color: ${colors.green};
   }
 
   .overline {

@@ -200,13 +200,11 @@ const Projects = ({ data }) => {
                         <StyledProjectDescription dangerouslySetInnerHTML={{ __html: html }} />
                       </header>
                       <footer>
-                        {tech && (
-                          <StyledTechList>
-                            {tech.map((tech, i) => (
-                              <li key={i}>{tech}</li>
-                            ))}
-                          </StyledTechList>
-                        )}
+                        <StyledTechList>
+                          {tech.map((tech, i) => (
+                            <li key={i}>{tech}</li>
+                          ))}
+                        </StyledTechList>
                       </footer>
                     </StyledProjectInner>
                   </StyledProject>

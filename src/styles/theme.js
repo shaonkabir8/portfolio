@@ -1,22 +1,29 @@
-import { hex2rgba } from '@utils';
-
-const ACCENT = '#64ffda';
-const DARK_BG = '#020c1b';
-const BG = '#0a192f';
-
 const theme = {
   colors: {
-    darkNavy: DARK_BG,
-    navy: BG,
+    dark: '#000007',
+    darkestNavy: '#01050b',
+    darkNavy: '#020c1b',
+    navy: '#0a192f',
     lightNavy: '#172a45',
-    lightestNavy: '#303C55',
+    darkGrey: '#333f58',
+    mediumGrey: '#2d3952',
+    grey: '#4c5772',
+    lightGrey: '#606a86',
     slate: '#8892b0',
     lightSlate: '#a8b2d1',
     lightestSlate: '#ccd6f6',
+    offWhite: '#dce7ff',
     white: '#e6f1ff',
-    green: ACCENT,
-    transGreen: hex2rgba(ACCENT, 0.07),
-    shadowNavy: hex2rgba(DARK_BG, 0.7),
+    pink: '#FF647F',
+    yellow: '#FFC464',
+    orange: '#FF9E64',
+    green: '#64ffda',
+    blue: '#71AFFF',
+    darkBlue: '#1D7FFC',
+    highlight: 'rgba(41, 61, 90, 0.99)',
+    transGreen: 'rgba(100, 255, 218, 0.07)',
+    transNavy: 'rgba(10, 25, 47, 0.7)',
+    shadowNavy: 'rgba(2, 12, 27, 0.7)',
   },
 
   fonts: {
@@ -48,14 +55,15 @@ const theme = {
   tabWidth: 120,
   radius: 3,
 
+  gradient: `linear-gradient(0.4turn, #64d6ff, #64ffda)`,
+
+  loaderDelay: `6`,
+
   hamburgerWidth: 30,
   hamBefore: `top 0.1s ease-in 0.25s, opacity 0.1s ease-in`,
   hamBeforeActive: `top 0.1s ease-out, opacity 0.1s ease-out 0.12s`,
   hamAfter: `bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19)`,
   hamAfterActive: `bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s`,
-
-  navDelay: 1000,
-  loaderDelay: 2000,
 };
 
 export default theme;

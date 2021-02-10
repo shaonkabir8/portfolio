@@ -20,6 +20,9 @@ const SkipToContent = styled.a`
   height: 1px;
   overflow: hidden;
   z-index: -99;
+  &:hover {
+    background-color: ${colors.darkGrey};
+  }
   &:focus,
   &:active {
     outline: 0;
