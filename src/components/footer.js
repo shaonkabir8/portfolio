@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { FormattedIcon } from '@components/icons';
 import { socialMedia } from '@config';
+import { media, mixins, theme } from '@styles';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { theme, mixins, media } from '@styles';
 const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled.footer`
@@ -107,7 +107,7 @@ const Footer = () => {
           rel="nofollow noopener noreferrer">
           <div>
             Designed &amp; Built by Brittany Chiang<br></br>
-            Revised by Chandrika Deb
+            Revised by Shaon Kabir
           </div>
 
           {githubInfo.stars && githubInfo.forks && (

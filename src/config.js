@@ -1,38 +1,38 @@
 module.exports = {
-  siteTitle: 'Chandrika Deb | Software Developer | Content Freelancer',
+  siteTitle: 'Shaon Kabir | Frontend Developer',
   siteDescription:
-    'Chandrika Deb is a Software Developer at Amdocs, who loves learning new things and helping tech beginners.',
+    'Shaon Kabir is an interactive frontend developer living in beautiful Bangladesh, building high-quality websites and applications with pixel perfect and modern design.',
   siteKeywords:
-    'Chandrika Deb, Chandrika, Deb, chandrikadeb7, software developer, software engineer, content freelancer, face mask, face mask detection, web developer, java developer, pepper content, jamshedpur, amdocs, bit, mesra',
-  siteUrl: 'https://chandrikadeb7.github.io/',
+    'Shaon Kabir, Shaon, Kabir, shaonkabir8, front-end engineer, web developer, javascript',
+  siteUrl: 'https://shaonkabir.com',
   siteLanguage: 'en_US',
   googleAnalyticsID: 'UA-45666519-2',
   googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
-  name: 'Chandrika Deb',
-  location: 'Jamshedpur, India',
-  email: 'chandrikadeb7@gmail.com',
-  github: 'https://github.com/chandrikadeb7',
-  twitterHandle: '@chandrikadeb7',
+  name: 'Shaon Kabir',
+  location: 'Dhaka, India',
+  email: 'shaonkabir98@gmail.com',
+  github: 'https://github.com/shaonkabir8',
+  twitterHandle: '@shaonkabir8',
   socialMedia: [
     {
       name: 'GitHub',
-      url: 'https://github.com/chandrikadeb7',
+      url: 'https://github.com/shaonkabir8',
     },
     {
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/chandrika-deb/',
+      url: 'https://www.linkedin.com/in/shaonkabir8/',
     },
     {
       name: 'Codepen',
-      url: 'https://codepen.io/chandrikadeb7',
+      url: 'https://codepen.io/shaonkabir8',
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/chandrikadeb7',
+      url: 'https://www.instagram.com/shaonkabir8',
     },
     {
       name: 'Twitter',
-      url: 'https://twitter.com/chandrikadeb7',
+      url: 'https://twitter.com/shaonkabir8',
     },
   ],
 
