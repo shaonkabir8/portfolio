@@ -1,14 +1,14 @@
 ---
 date: '1'
-title: 'Caim Consulting'
+title: 'Ratina Unsplash'
 cover: 'demo1.png'
 github: 'https://github.com/caimconsulting/caim-consulting-website'
 external: 'https://caimconsulting.in/'
 tech:
-  - HTML
-  - CSS
-  - Javascript
-  - Bootstrap
+  - React.js
+  - S(CSS)
+  - UnSplash API
+  - React Pagination
 
 showInProjects: true
 ---

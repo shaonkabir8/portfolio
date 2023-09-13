@@ -1,14 +1,14 @@
 ---
 date: '3'
-title: 'Face Mask Detection'
-cover: 'face-mask.png'
+title: 'Name Search Engine'
+cover: 'demo.png'
 github: 'https://github.com/chandrikadeb7/Face-Mask-Detection'
 external: 'https://www.youtube.com/watch?v=AAkNyZlUae0'
 tech:
-  - OpenCV
-  - TensorFlow
-  - Keras
-  - Python
+  - React.js
+  - Node.js
+  - MongoDB
+  - Express.js
 showInProjects: true
 ---
 

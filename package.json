@@ -1,13 +1,15 @@
 {
   "name": "portfolio",
-  "description": "Personal Website V2",
+  "description": "Personal portfolio Website",
   "version": "1.0.0",
   "author": "Shaon Kabir <shaonkabir98@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shaonkabir8/portfolio",
+    "url": "https://github.com/shaonkabir8/portfolio"
+  },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "personal portfolio"
   ],
   "license": "MIT",
   "scripts": {
@@ -17,7 +19,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -b last_update"
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "husky": {
     "hooks": {
@@ -33,8 +35,12 @@
     ]
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "animejs": "^3.1.0",
     "babel-plugin-styled-components": "^2.0.2",
+    "bootstrap": "^5.3.1",
     "gatsby": "^4.6.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-google-analytics": "^4.6.0",
